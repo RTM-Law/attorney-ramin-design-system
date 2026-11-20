@@ -16,7 +16,7 @@ Ramin writes the way he would talk to a client across the table the day after a 
 ## Mechanics
 
 - **Sentence case** for every headline, button, nav item and label: “Request a free consultation”, not “Request A Free Consultation”.
-- **Uppercase** only in the `eyebrow` style and the logo descriptor, applied with CSS, never typed in caps.
+- **Uppercase** only in the `eyebrow` style, button labels and the logo descriptor, applied with CSS, never typed in caps. Button labels are still written in sentence case in the markup.
 - **Numbers**: numerals for 10 and up and for all money, ages, dates and times. Money in full with commas: “$1,850,000”, never “$1.85M” or “7 figures”.
 - **Phone**: `(855) 786-9467`. Link it with `tel:+18557869467`.
 - **Dates**: “Sep 18, 2026” in cards; “September 18, 2026” in running text.

@@ -17,7 +17,7 @@ Then open `https://attorneyramin.com/design-system/`. All paths are relative, so
 
 ## Publishing an update
 
-Browsers cache CSS, JavaScript, fonts and images, so a visitor could keep seeing an old version after you upload a new one. `index.html` carries a cache key, `?v=1.1.0`, on its four `<link>` and `<script>` tags; `viewer/app.js` reads the key from its own tag and adds it to every file it loads (`bundle.css`, the fonts, logos, photos and icons). After uploading a change, raise the number on all four tags in `index.html` (for example to `?v=1.1.1`) and upload `index.html` too; every visitor then gets the new files without clearing their cache. The HTML, JSON and Markdown need no key: `.htaccess` tells browsers to revalidate them on every visit.
+Browsers cache CSS, JavaScript, fonts and images, so a visitor could keep seeing an old version after you upload a new one. `index.html` carries a cache key, such as `?v=1.2.0`, on its four `<link>` and `<script>` tags; `viewer/app.js` reads the key from its own tag and adds it to every file it loads (`bundle.css`, the fonts, logos, photos and icons). After uploading a change, raise the number on all four tags in `index.html` (for example to `?v=1.2.1`) and upload `index.html` too; every visitor then gets the new files without clearing their cache. The HTML, JSON and Markdown need no key: `.htaccess` tells browsers to revalidate them on every visit.
 
 ## Run it on your computer
 

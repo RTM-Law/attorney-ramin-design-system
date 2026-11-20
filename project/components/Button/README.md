@@ -20,7 +20,8 @@ Buttons start an action or go to the consultation form; the vermilion primary ap
 | `loading` | bool | false | Spinner + “Sending…”, sets `aria-busy`. With Livewire use `wire:loading` on the inner spans. |
 
 ## Spec
-- Height 36 / 44 / 52px; padding `space-4` / `space-5` / `space-6`; radius `radius-xs`; label `label-md` (13 / 14 / 16px, weight 500, +0.01em).
+- Height 36 / 44 / 52px; padding `space-4` / `space-5` / `space-6`; radius `radius-xs`; label in capitals through `text-transform: uppercase`, 12 / 13 / 14px, line height 1.25, +0.06em, weight 500; the primary variant sets weight 600 so the white label holds up on vermilion.
+- Below 640px a label that does not fit wraps to a second line instead of overflowing, with `space-2` above and below.
 - primary: `accent` → hover `accent-hover` → active `accent-pressed`, label `on-accent`.
 - secondary: 1px `line-strong`, `shadow-xs`, label `ink`; hover border `ink` + `page-subtle` fill.
 - ghost: no border; hover `page-subtle`.
@@ -30,10 +31,10 @@ Buttons start an action or go to the consultation form; the vermilion primary ap
 ## Tailwind recipe
 ```html
 <!-- primary, md -->
-<a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xs bg-accent px-5 label-md text-on-accent transition-colors duration-fast ease-standard hover:bg-accent-hover active:bg-accent-pressed">…</a>
+<a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xs bg-accent px-5 text-[13px] leading-tight font-semibold uppercase tracking-[0.06em] text-on-accent transition-colors duration-fast ease-standard hover:bg-accent-hover active:bg-accent-pressed">…</a>
 <!-- secondary, md -->
-<a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xs border border-line-strong px-5 label-md text-ink shadow-xs hover:border-ink hover:bg-page-subtle">…</a>
+<a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xs border border-line-strong px-5 text-[13px] leading-tight font-medium uppercase tracking-[0.06em] text-ink shadow-xs hover:border-ink hover:bg-page-subtle">…</a>
 ```
 
 ## Content
-Verb first, sentence case, no “Click here”, no exclamation marks. Phone buttons show the number itself: “Call (855) 786-9467”.
+Verb first, no “Click here”, no exclamation marks. Write labels in sentence case; the button style sets them in capitals, so never type them in caps. Phone buttons show the number itself: “Call (855) 786-9467”.

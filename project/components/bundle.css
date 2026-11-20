@@ -68,15 +68,15 @@ a { color: inherit; }
   display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
   min-height: var(--btn-h); padding: 0 var(--space-5);
   border: 1px solid transparent; border-radius: var(--radius-xs);
-  font: 500 14px/1.25 var(--font-sans); letter-spacing: 0.01em;
+  font: 500 13px/1.25 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase;
   text-decoration: none; white-space: nowrap; cursor: pointer;
   background: transparent; color: var(--ink);
   transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
 }
-.ar-btn--sm { --btn-h: 36px; padding: 0 var(--space-4); font-size: 13px; }
-.ar-btn--lg { --btn-h: 52px; padding: 0 var(--space-6); font-size: 16px; }
+.ar-btn--sm { --btn-h: 36px; padding: 0 var(--space-4); font-size: 12px; }
+.ar-btn--lg { --btn-h: 52px; padding: 0 var(--space-6); font-size: 14px; }
 .ar-btn--block { display: flex; width: 100%; }
-.ar-btn--primary { background: var(--accent); color: var(--on-accent); }
+.ar-btn--primary { background: var(--accent); color: var(--on-accent); font-weight: 600; }
 .ar-btn--primary:hover { background: var(--accent-hover); }
 .ar-btn--primary:active { background: var(--accent-pressed); }
 .ar-btn--secondary { border-color: var(--line-strong); box-shadow: var(--shadow-xs); }
@@ -126,7 +126,7 @@ a { color: inherit; }
 .ar-header__brand { color: var(--ink); text-decoration: none; display: inline-flex; }
 .ar-header__brand svg { height: 26px; width: auto; display: block; }
 .ar-nav { display: flex; gap: var(--space-8); margin-left: auto; }
-.ar-nav a { position: relative; font: 500 15px/1.25 var(--font-sans); color: var(--ink-muted); text-decoration: none; padding: 8px 0; transition: color var(--duration-fast) var(--ease-standard); }
+.ar-nav a { position: relative; font: 500 15px/1.25 var(--font-sans); color: var(--ink-muted); text-decoration: none; padding: 8px 0; white-space: nowrap; transition: color var(--duration-fast) var(--ease-standard); }
 .ar-nav a:hover { color: var(--ink); }
 .ar-nav a[aria-current="page"] { color: var(--ink); }
 .ar-nav a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent-ink); }
@@ -402,6 +402,11 @@ a { color: inherit; }
 .ar-disclaimer strong { color: var(--ink-muted); font-weight: 600; }
 .ar-disclaimer--block { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: var(--space-3); padding: var(--space-4) var(--space-5); background: var(--page-subtle); border: 1px solid var(--line); border-radius: var(--radius-sm); }
 .ar-disclaimer--block .ar-icon { width: 18px; height: 18px; color: var(--ink-subtle); margin-top: 1px; }
+
+/* ---------- Phones: a label that does not fit wraps instead of overflowing ---------- */
+@media (max-width: 639.98px) {
+  .ar-btn { white-space: normal; text-align: center; padding-block: var(--space-2); }
+}
 
 /* ---------- Motion preferences ---------- */
 @media (prefers-reduced-motion: reduce) {

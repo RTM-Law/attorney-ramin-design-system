@@ -20,9 +20,10 @@ Vermilion is the tie’s red: narrow, single, deliberate. Per view, allow one `a
 | `ink` | `#0E1A30` | `#EEF2F8` | Text |
 | `ink-muted` | `#475266` | `#AEB9CC` | Secondary text |
 | `ink-subtle` | `#5F6B7E` | `#8D99AE` | Meta, captions |
-| `accent` | vermilion-500 `#F53003` | vermilion-500 `#F53003` | Primary fill |
+| `accent` | vermilion-550 `#E42B00` | vermilion-550 `#E42B00` | Primary fill |
 | `accent-hover` | vermilion-600 `#C42602` | vermilion-600 `#C42602` | Primary fill, hovered |
 | `accent-ink` | vermilion-600 `#C42602` | vermilion-400 `#FF7055` | Vermilion as text |
+| `pip` | vermilion-500 `#F53003` | vermilion-500 `#F53003` | The brand vermilion: pip, logo, illustrations |
 | `line` | `#E3E8EE` | `#1E2A44` | Hairlines |
 | `line-strong` | `#7A8597` | `#5B6B8A` | Control borders |
 
@@ -40,22 +41,22 @@ Checked for every pair a usage note names, in both themes. Lowest values:
 | `accent-ink` on `page-subtle` / `overlay` | 5.4 | 5.6 | 4.5 |
 | `on-accent` on `accent-hover` | 5.8 | 5.8 | 4.5 |
 | `on-accent` on `accent-pressed` | 7.9 | 7.9 | 4.5 |
-| `on-accent` on `accent` / `accent-on-brand` | 3.96 | 3.96 | 4.5 (exception 1) |
+| `on-accent` on `accent` / `accent-on-brand` | 4.52 | 4.52 | 4.5 |
 | `on-brand-muted` on `brand` | 9.3 | 7.9 | 4.5 |
 | `danger` on `danger-soft` | 6.0 | 5.9 | 4.5 |
-| `accent` against `page-subtle` / `overlay` (button boundary) | 3.7 | 3.9 | 3.0 |
-| `accent-on-brand` and `pip-on-brand` on `brand` | 4.1 | 3.5 | 3.0 |
+| `accent` against `page-subtle` / `overlay` (button boundary) | 4.2 | 3.4 | 3.0 |
+| `accent-on-brand` on `brand` | 3.6 | 3.06 | 3.0 |
+| `pip-on-brand` on `brand` | 4.1 | 3.5 | 3.0 |
 | `pip` on `page-subtle` / `overlay` | 3.7 | 3.9 | 3.0 |
 | `line-strong` on `page` / `raised` | 3.6 | 3.1 | 3.0 |
 
-Two accepted exceptions, both on the primary button:
+**Why the button is a step deeper than the brand vermilion.** White on `#F53003` measures only 3.96:1, under the 4.5:1 AA asks of 13–16px button labels. The button therefore fills with `vermilion-550` `#E42B00`, the same hue a step deeper, where the white label reaches 4.52:1, and sets the label at weight 600. `#F53003` stays the brand vermilion for the pip, the logo and illustrations, which are graphics and need only 3:1.
 
-1. **The white label on the resting fill.** White on `#F53003` measures 3.96:1 in both themes: above the 3:1 that AA asks of large text and of a control’s boundary, under the 4.5:1 it asks of 13–16px button labels. The hovered and pressed fills pass. If strict AA is wanted on the resting button, darken the fill to `#E42B00` (4.5:1 at the same hue) or rest it on `accent-hover` `#C42602` (5.8:1); either means re-pointing the `accent` and `accent-on-brand` tokens.
-2. **The hovered and pressed fills are darker**, so their edge drops under 3:1 against the navy `brand` band (hovered 2.8:1 light, 2.4:1 dark; pressed lower). In the dark theme the hovered fill is also under 3:1 on `raised` and `overlay` (2.9:1 and 2.6:1) and the pressed fill on every surface (2.4:1 or less). The button’s white label (5.8:1 or better) identifies it, which satisfies WCAG 1.4.11.
+One accepted exception, on the primary button’s hover and pressed states: **the hovered and pressed fills are darker**, so their edge drops under 3:1 against the navy `brand` band (hovered 2.8:1 light, 2.4:1 dark; pressed lower). In the dark theme the hovered fill is also under 3:1 on `raised` and `overlay` (2.9:1 and 2.6:1) and the pressed fill on every surface (2.4:1 or less). The button’s white label (5.8:1 or better) identifies it, which satisfies WCAG 1.4.11.
 
 ## Dark theme
 
-Dark is midnight navy, the suit at night, never neutral grey. Surfaces step up in lightness (`page` → `page-subtle` → `raised` → `overlay`) because shadows barely read on navy. Vermilion is bright enough to stay put: `accent`, `pip` and their on-brand variants keep `vermilion-500` in both themes (4.7:1 against the dark `page`), and only `accent-ink` lightens to `vermilion-400` so text holds 5.6:1 or better on `raised` and `overlay`. The primary button’s hover goes darker, not lighter, so its white label gains contrast instead of losing it. The `brand` band moves from navy-900 to navy-800 so it still separates from the page.
+Dark is midnight navy, the suit at night, never neutral grey. Surfaces step up in lightness (`page` → `page-subtle` → `raised` → `overlay`) because shadows barely read on navy. Vermilion is bright enough to stay put: `accent` keeps `vermilion-550` and `pip` keeps `vermilion-500` in both themes, as do their on-brand variants, and only `accent-ink` lightens to `vermilion-400` so text holds 5.6:1 or better on `raised` and `overlay`. The primary button’s hover goes darker, not lighter, so its white label gains contrast instead of losing it. The `brand` band moves from navy-900 to navy-800 so it still separates from the page.
 
 ## Status
 

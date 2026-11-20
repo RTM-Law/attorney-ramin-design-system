@@ -73,6 +73,7 @@ Component names match the component pages in this system one to one: SiteHeader 
   --color-vermilion-300: #FFA18E;
   --color-vermilion-400: #FF7055;
   --color-vermilion-500: #F53003;
+  --color-vermilion-550: #E42B00;
   --color-vermilion-600: #C42602;
   --color-vermilion-700: #9E2007;
   --color-vermilion-800: #7A1806;
@@ -107,12 +108,12 @@ Component names match the component pages in this system one to one: SiteHeader 
   --color-ink-subtle: #5F6B7E;
   --color-on-brand: #F4F6FA;
   --color-on-brand-muted: #B8C4DA;
-  --color-accent: var(--color-vermilion-500);
+  --color-accent: var(--color-vermilion-550);
   --color-accent-hover: var(--color-vermilion-600);
   --color-accent-pressed: var(--color-vermilion-700);
   --color-accent-ink: var(--color-vermilion-600);
   --color-accent-soft: var(--color-vermilion-50);
-  --color-accent-on-brand: var(--color-vermilion-500);
+  --color-accent-on-brand: var(--color-vermilion-550);
   --color-on-accent: #FFFFFF;
   --color-pip: var(--color-vermilion-500);
   --color-pip-on-brand: var(--color-vermilion-500);
@@ -186,7 +187,7 @@ Component names match the component pages in this system one to one: SiteHeader 
     --color-ink: #EEF2F8;
     --color-ink-muted: #AEB9CC;
     --color-ink-subtle: #8D99AE;
-    --color-accent: var(--color-vermilion-500);
+    --color-accent: var(--color-vermilion-550);
     --color-accent-hover: var(--color-vermilion-600);
     --color-accent-pressed: var(--color-vermilion-700);
     --color-accent-ink: var(--color-vermilion-400);
@@ -321,12 +322,12 @@ Anonymous Blade components with `@props` and `$attributes->class()` so callers c
 {{-- resources/views/components/button.blade.php --}}
 @props(['variant' => 'primary', 'size' => 'md', 'href' => null, 'icon' => null, 'iconRight' => null, 'block' => false])
 @php
-  $base = 'inline-flex items-center justify-center gap-2 rounded-xs border whitespace-nowrap transition-colors duration-fast ease-standard aria-disabled:pointer-events-none aria-disabled:opacity-45';
-  $sizes = ['sm' => 'min-h-9 px-4 label-sm', 'md' => 'min-h-11 px-5 label-md', 'lg' => 'min-h-13 px-6 label-lg'];
+  $base = 'inline-flex items-center justify-center gap-2 rounded-xs border leading-tight uppercase tracking-[0.06em] whitespace-nowrap max-sm:whitespace-normal max-sm:py-2 max-sm:text-center transition-colors duration-fast ease-standard aria-disabled:pointer-events-none aria-disabled:opacity-45';
+  $sizes = ['sm' => 'min-h-9 px-4 text-xs', 'md' => 'min-h-11 px-5 text-[13px]', 'lg' => 'min-h-13 px-6 text-sm'];
   $variants = [
-    'primary'   => 'border-transparent bg-accent text-on-accent hover:bg-accent-hover active:bg-accent-pressed on-brand:bg-accent-on-brand',
-    'secondary' => 'border-line-strong text-ink shadow-xs hover:border-ink hover:bg-page-subtle on-brand:border-on-brand-muted on-brand:text-on-brand on-brand:shadow-none on-brand:hover:bg-line-brand',
-    'ghost'     => 'border-transparent text-ink hover:bg-page-subtle',
+    'primary'   => 'border-transparent bg-accent font-semibold text-on-accent hover:bg-accent-hover active:bg-accent-pressed on-brand:bg-accent-on-brand',
+    'secondary' => 'border-line-strong font-medium text-ink shadow-xs hover:border-ink hover:bg-page-subtle on-brand:border-on-brand-muted on-brand:text-on-brand on-brand:shadow-none on-brand:hover:bg-line-brand',
+    'ghost'     => 'border-transparent font-medium text-ink hover:bg-page-subtle',
   ];
   $classes = [$base, $sizes[$size], $variants[$variant], 'w-full' => $block];
 @endphp

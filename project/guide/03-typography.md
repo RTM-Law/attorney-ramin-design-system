@@ -32,13 +32,14 @@ Desktop sizes are the token values. Below 1280px, sizes interpolate linearly dow
 | `body-md` | 16 | 16 | 1.6 | Default |
 | `body-sm` | 14 | 14 | 1.55 | Secondary |
 | `caption` | 13 | 13 | 1.5 | Legal, credits |
-| `label-lg` / `label-md` / `label-sm` | 16 / 14 / 13 | same | 1.2–1.25 | Buttons, labels, badges |
+| `label-lg` / `label-md` / `label-sm` | 16 / 14 / 13 | same | 1.2–1.25 | Form labels, tabs, badges |
+| Button label | 14 / 13 / 12 | same | 1.25 | Large / default / small buttons, in capitals, +0.06em |
 | `eyebrow` | 12 | 12 | 1.3 | Section labels, uppercase +0.16em |
 
 ## Rules
 
 - **Display weight is always 400.** Caslon Display has one weight by design; faux bold is forbidden (`font-synthesis: none` on headings).
-- **Tracking**: display styles are tightened (−0.025em to −0.005em) as the size grows. Body text is never tracked. Uppercase labels open up to +0.16em.
+- **Tracking**: display styles are tightened (−0.025em to −0.005em) as the size grows. Body text is never tracked. Uppercase text is tracked open: eyebrows +0.16em, button labels +0.06em.
 - **Italic emphasis**: in a headline, `<em>` switches to Libre Caslon Text Italic at 0.86em so its x-height matches the Display roman. Use it for the last two or three words, once per headline.
 - **Measure**: body 60–72 characters, `lead` 54–58, articles 68 (`container-article`).
 - **Wrapping**: `text-wrap: balance` on headings, `text-wrap: pretty` on paragraphs. Use a non-breaking hyphen in “I‑5” and a non-breaking space in “§ 335.1”.

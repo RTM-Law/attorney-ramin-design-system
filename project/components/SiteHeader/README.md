@@ -18,6 +18,7 @@ Behavior (Alpine): `x-data="{ scrolled: false }" @scroll.window="scrolled = wind
 ## Spec
 - Height `header-height` (80px) at lg+, 64px below. Inner width `container-wide`, side padding `gutter-desktop` / `gutter-phone`. `z-sticky`.
 - At top: `page` ground, no border. Scrolled: `raised`, 1px `line` bottom border, `shadow-sm`, transition `duration-slow`.
-- Nav links: 15px Libre Franklin 500, `ink-muted` → `ink` on hover; current link `ink` with a 2px `accent-ink` bar under it.
+- Nav links: 15px Libre Franklin 500, never wrapping, `ink-muted` → `ink` on hover; current link `ink` with a 2px `accent-ink` bar under it.
+- Between 1024 and 1279px the row is tight: the gaps between groups and between nav links drop to `space-6` and the wordmark to 22px tall, so the nav, theme toggle and button stay on one line.
 - The button reads “Free consultation” here (short form) and links to /contact.
 - Include a skip link as the first focusable element: “Skip to content”, visible on focus, `z-toast`.

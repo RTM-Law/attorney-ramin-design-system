@@ -4,7 +4,7 @@ Target: **WCAG 2.2 AA** in both themes, tested before launch with keyboard only,
 
 ## Built into the tokens
 
-- Every text pair named in a usage note meets 4.5:1 in light and dark, with one documented exception, the white label on the resting primary button (3.96:1; see Contrast in Color for the two ways to close it); control borders and focus rings meet 3:1.
+- Every text pair named in a usage note meets 4.5:1 in light and dark, including the white label on the primary button (4.52:1 at weight 600); control borders and focus rings meet 3:1. See the contrast table in Color.
 - Status is never color alone: each Alert, field error and badge carries an icon and words.
 - The smallest text is 13px (`caption`); body text is 16px and inputs are 16px so iOS does not zoom.
 
@@ -32,6 +32,7 @@ At least 44×44px for touch targets below `lg` (buttons `md`/`lg`, menu button, 
 
 - `<html lang="en">` on English pages, `lang="es"` on Spanish pages and on Spanish runs inside English pages.
 - One `h1` per page, headings in order, landmarks (`header`, `nav`, `main`, `footer`).
+- Capitals come from CSS (`text-transform`), never typed text, so screen readers read button labels and eyebrows as words, not letters.
 - Phone numbers are real `tel:` links; addresses use `<address>`.
 
 ## Motion and media
